@@ -151,7 +151,7 @@ fi
 
 KEY_INFO=""
 if [[ ! -z "${KEYSTORE_FILE}" ]]; then
-    KEY_INFO="--ks=${KEYSTORE_FILE} --ks-pass=pass:${KEYSTORE_PASSWORD} --ks-key-alias=${ALIAS} --key-pass=pass:${ALIAS_PASSWORD}"
+    KEY_INFO="--ks=\"${KEYSTORE_FILE}\" --ks-pass=\"pass:${KEYSTORE_PASSWORD}\" --ks-key-alias=\"${ALIAS}\" --key-pass=pass:\"${ALIAS_PASSWORD}\""
 else
     echo "No valid keystore configuration provided. Using debug keystore"
 fi
